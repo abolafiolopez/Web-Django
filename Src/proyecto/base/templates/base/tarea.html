@@ -2,9 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ver tarea</title>
 </head>
 <body>
+    <a href="{% url 'tareas' %}">Volver</a>
     <h1>Tarea: {{tarea}}</h1>
+    <h2>Título: {{tarea.titulo}}</h2>
+    <h3>Descripción: {{tarea.descripcion}}</h3>
+    <p>Completada: {{tarea.completada}}</p>
 </body>
 </html>
