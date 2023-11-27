@@ -13,6 +13,10 @@
     {% endif %}
     <hr>
     <h1>Lista de pendientes</h1>
+    <form action="" method="GET">
+        <input type="text" name="area-busqueda" value="{{busqueda}}">
+        <input type="submit" value="Buscar">
+    </form>
     <a href="{% url 'crear-tarea' %}">Crear nueva tarea</a>
     <table>
         <tr>
@@ -32,8 +36,6 @@
         {% empty %}
         <h3>No hay elementos en esta lista</h3>
         {% endfor %}
-
-
     </table>
 </body>
 </html>

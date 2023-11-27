@@ -41,11 +41,15 @@ class ListaPendientes(LoginRequiredMixin, ListView):
     model = Tarea
     context_object_name = 'tareas'
 
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['tareas'] = context['tareas'].filter(usuario=self.request.user)
         context['count'] = context['tareas'].filter(completada=False).count()
+
+        busqueda = self.request.GET.get('area-busqueda') or ''
+        if busqueda:
+            context['tareas'] = context['tareas'].filter(titulo__icontains=busqueda)
+        context['busqueda'] = busqueda
         return  context
 
 
