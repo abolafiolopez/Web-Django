@@ -2,15 +2,15 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ingresa</title>
+    <title>Registrarse</title>
 </head>
 <body>
-    <h1>Ingresa</h1>
+    <h1>Registrarse</h1>
     <form action="" method="POST">
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="Igresar">
+        <input type="submit" value="Registrar">
     </form>
-    <p>No tienes una cuenta? <a href="{% url 'registro' %}">Regístrate</a></p>
+    <p>Ya tienes una cuenta? <a href="">Ingresar</a></p>
 </body>
 </html>

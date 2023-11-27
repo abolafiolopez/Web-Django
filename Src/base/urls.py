@@ -1,10 +1,11 @@
 from django.urls import path
-from .views import Login, ListaPendientes, DetalleTarea, CrearTarea, EditarTarea, EliminarTarea
+from .views import Login, ListaPendientes, DetalleTarea, CrearTarea, EditarTarea, EliminarTarea, PaginaRegistro
 from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('login', Login.as_view(), name='login'),
     path('logout', LogoutView.as_view(next_page='login'), name='logout'),
+    path('registro', PaginaRegistro.as_view(), name='registro'),
     path('', ListaPendientes.as_view(), name='tareas'),
     path('tarea/<int:pk>', DetalleTarea.as_view(), name='tarea'),
     path('crear-tarea/', CrearTarea.as_view(), name='crear-tarea'),
