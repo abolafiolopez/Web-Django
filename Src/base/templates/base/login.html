@@ -5,6 +5,9 @@
     <title>Ingresa</title>
 </head>
 <body>
+    {% extends 'base/principal.html' %}
+    {% block content %}
+
     <h1>Ingresa</h1>
     <form action="" method="POST">
         {% csrf_token %}
@@ -12,5 +15,6 @@
         <input type="submit" value="Igresar">
     </form>
     <p>No tienes una cuenta? <a href="{% url 'registro' %}">Regístrate</a></p>
+    {% endblock content %}
 </body>
 </html>

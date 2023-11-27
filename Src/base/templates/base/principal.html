@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <title>Lista de pendientes</title>
+    <style>
+        body {
+        background-color: #D9D8FE;
+        font-family: 'Open Sans', sans-serif;
+        padding-rop: 60px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background-color: #E8E8FF;
+            -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0.21);
+            box-shadows: 2px 2px 13px -4px rgba(0, 0, 0.21);
+        }
+
+        a, p {
+            color: #000041;
+        }
+
+        .barra-superior {
+            display: flex;
+            justify-content: space-between;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            background: linear-gradient(90deg, #8080FF 0%, #2727FF 50%, #2727FF 100%);
+        }
+
+        .barra-superior a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .tarea {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: white;
+            border-top: 1px solid black;
+        }
+
+        .titulo-tarea {
+            display: flex;
+        }
+
+        .titulo-tarea a {
+            text-decoration: none;
+            color: #000041;
+            margin-left: 10px;
+        }
+
+        .icono-tarea-completa {
+            height: 20px;
+            width: 20px;
+            background-color: red;
+            border-radius: 50px;
+        }
+
+        .icono-tarea-incompleta {
+            height: 20px;
+            width: 20px;
+            background-color: yellow;
+            border-radius: 50px;
+        }
+
+        .enlace-eliminar {
+            text-decoration: none;
+            font-weight: 900;
+            color: black;
+            font-size: 22px;
+            line-height: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+</html>
