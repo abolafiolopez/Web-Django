@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Eliminar tarea</title>
-</head>
-<body>
-    {% extends 'base/principal.html' %}
-    {% block content %}
-    <div class="barra-superior">
-        <a href="{% url 'tareas' %}">&#x2B90; Volver</a>
-    </div>
-    <div class="formulario">
-        <form action="" method="POST">
-        {% csrf_token %}
-        <p>Vas a eliminar esta tarea: "{{tarea}}"</p>
-        <input class="boton" type="submit" value="Eliminar">
-        </form>
-    </div>
-    {% endblock content %}
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eliminar tarea</title>
+    </head>
+    <body>
+        {% extends 'base/principal.html' %}
+        {% block content %}
+        <div class="barra-superior">
+            <a href="{% url 'tareas' %}">&#x2B90; Volver</a>
+        </div>
+        <div class="formulario">
+            <form action="" method="POST">
+            {% csrf_token %}
+            <p>Vas a eliminar esta tarea: "{{tarea}}"</p>
+            <input class="boton" type="submit" value="Eliminar">
+            </form>
+        </div>
+        {% endblock content %}
+    </body>
 </html>

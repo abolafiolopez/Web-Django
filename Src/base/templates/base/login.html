@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ingresa</title>
-</head>
-<body>
-    {% extends 'base/principal.html' %}
-    {% block content %}
-    <div class="barra-superior">
-        <h1>Ingresa</h1>
-    </div>
-    <div class="formulario">
-        <form action="" method="POST">
-            {% csrf_token %}
-            {{form.as_p}}
-            <input class="boton" type="submit" value="Igresar">
-        </form>
-        <p>No tienes una cuenta? <a href="{% url 'registro' %}">Regístrate</a></p>
-    </div>
-    {% endblock content %}
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ingresa</title>
+    </head>
+    <body>
+        {% extends 'base/principal.html' %}
+        {% block content %}
+        <div class="barra-superior">
+            <h1>Ingresa</h1>
+        </div>
+        <div class="formulario">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input class="boton" type="submit" value="Igresar">
+            </form>
+            <p>No tienes una cuenta? <a href="{% url 'registro' %}">Regístrate</a></p>
+        </div>
+        {% endblock content %}
+    </body>
 </html>
