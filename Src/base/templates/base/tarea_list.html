@@ -18,6 +18,13 @@
         <a href="{% url 'login' %}">Ingresar</a>
         {% endif %}
     </div>
+    <div id="area-buscar">
+       <form action="" method="GET" style="margin-top: 20px; display: flex">
+            <input type="text" name="area-busqueda" value="{{busqueda}}">
+            <input class="boton" type="submit" value="Buscar">
+        </form>
+        <a id="enlace-crear-tarea" href="{% url 'crear-tarea' %}">&#x1F7A5;</a>
+    </div>
     <div class="lista-tareas">
         {% for tarea in tareas %}
         <div class="tarea">
